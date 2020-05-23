@@ -1,4 +1,4 @@
-package com.wyc.forum.forum;
+package com.wyc.forum.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

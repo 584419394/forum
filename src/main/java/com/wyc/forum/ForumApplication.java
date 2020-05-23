@@ -1,4 +1,4 @@
-package com.wyc.forum.forum;
+package com.wyc.forum;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
