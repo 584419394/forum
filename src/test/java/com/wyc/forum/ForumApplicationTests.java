@@ -1,4 +1,4 @@
-package com.wyc.forum.forum;
+package com.wyc.forum;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
