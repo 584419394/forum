@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -27,16 +26,18 @@
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://github.com/login/oauth/authorize?client_id=5b80cb49be5ca853e41e&redirect_uri=http://localhost:8887/callback&scope=user&state=1">登录</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+                <li class="dropdown" th:if="${session.user != null}">
+                    <div href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div th:text="${session.user.getName()}"></div></div> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">消息中心</a></li>
                         <li><a href="#">暂   定</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">退出登录</a></li>
                     </ul>
                 </li>
+                <li th:if="${session.user == null}">
+                    <a href="https://github.com/login/oauth/authorize?client_id=5b80cb49be5ca853e41e&redirect_uri=http://localhost:8887/callback&scope=user&state=1">登录</a>
+                </li>
+
             </ul>
         </div>
     </div>
